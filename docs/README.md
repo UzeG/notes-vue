@@ -1,3 +1,4 @@
-# Headline
+# 🤯看什么看，还不快学习？
 
-> An awesome project.
+> Start from the sidebar to begin your vue hourney!
+
