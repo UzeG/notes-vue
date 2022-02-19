@@ -23,7 +23,7 @@
         `
     })
 ```
-注意 template 中模板最外层只能有一个根标签(不能是<template>)
+注意 template 中模板最外层只能有一个根标签(不能是 template 标签)
 ### 注册组件
 
 #### 局部
@@ -85,7 +85,7 @@ Vue.component('hello', hello);
 ### 总结
 
 1. 组件名
-            1个单词：
+           1个单词：
 
                 (1) 首字母小写 school --<School>
 
@@ -104,14 +104,14 @@ Vue.component('hello', hello);
                 (2) 使用 name 配置项指定组件在开发者工具中(仅)呈现的名字
 
 2. 组件标签
-            (1) <school></school>
+           (1) <school></school>
 
             (2) <school /> (脚手架
 
         
 
 3. 简写
-            const school = Vue.extend(options) => const school = options
+           const school = Vue.extend(options) => const school = options
 
 其中，简写为对向形式时，Vue会帮我们转成 VueComponent
 
@@ -172,11 +172,11 @@ Vue.component('hello', hello);
 
 1. school 组件本质是一个名为 VueComponent 的构造函数，时 Vue.extend 生成的
 2. 只需要写 <school /> or <school></school>，Vue 解析时就会帮我们创建 school 组件的实例对象
-            即 Vue 执行了 new VueComponent(options)
+           即 Vue 执行了 new VueComponent(options)
 
 3. 注意：每次调用 Vue.extend 都会返回一个*全新*的 VueComponent !!!
 4. this 指向
-            (1) 组件
+           (1) 组件
 
                 data, methods, watch, computed -- this -> 【VueComponent 实例对象】
 
@@ -187,7 +187,7 @@ Vue.component('hello', hello);
                 data, methods, watch, computed -- this -> 【Vue 实例对象】
 
 5. 
-            VueComponent 实例对象(vc) (组件实例对象)
+           VueComponent 实例对象(vc) (组件实例对象)
 
             Vue 实例对象(vm)
 
