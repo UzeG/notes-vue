@@ -3,7 +3,7 @@
 ## 事件的基本使用
 
 1. 使用 v-on:xxx 或 @xxx 绑定事件，其中 xxx 是事件名
-```xml
+```html
 <button v-on:click="showInfo">点我提示信息</button>
 <button @click="showInfo">点我提示信息</button>
 ```
@@ -66,9 +66,9 @@
          </div>
 ```
 6. passive: 事件的默认行为立即执行，无需等待事件回调执行完毕
-eg. 鼠标滚轮事件(wheel)时，在每次滚动触发事件。原来是先触发事件再执行默认行·               为，可能会因为事件函数太复杂导致卡顿
+  eg. 鼠标滚轮事件(wheel)时，在每次滚动触发事件。原来是先触发事件再执行默认行为，可能会因为事件函数太复杂导致卡顿。
 
-移动端会用到 .passive
+  移动端会用到 .passive
 
 事件可以连写 @click.stop.prevent
 
@@ -79,7 +79,7 @@ eg. 鼠标滚轮事件(wheel)时，在每次滚动触发事件。原来是先触
 ## 键盘事件
 
 1. Vue 常用按键别名
-            回车 => enter
+           回车 => enter
 
             删除 => delete ("Delete" 和 "Backspace")
 
@@ -99,7 +99,7 @@ eg. 鼠标滚轮事件(wheel)时，在每次滚动触发事件。原来是先触
 
 2. 其他: eg. 切换大小写键: .caps-lock
 3. 系统修饰键: ctrl, alt, shift, meta(win)
-            (1)配合 keyup 使用: 按下修饰键的同时，按下其他键，随后释放其他键，才会触发事件
+           (1)配合 keyup 使用: 按下修饰键的同时，按下其他键，随后释放其他键，才会触发事件
 
                 eg. ctrl+g ...
 
@@ -107,10 +107,10 @@ eg. 鼠标滚轮事件(wheel)时，在每次滚动触发事件。原来是先触
 
 4. 也可以使用 keyCodes(ASCII) 指定按键(不推荐)
 5. 利用 Vue.config.keyCodes. 自定义键名
-            eg. Vue.config.keyCodes.gyz = 13
+           eg. Vue.config.keyCodes.gyz = 13
 
 6. 按键修饰可以连写
-            eg. @keyup.ctrl.y
+           eg. @keyup.ctrl.y
 
 ```xml
 <input type="text" placeholder="按下回车停止提示输入" @keyup.enter="showInfo">
@@ -183,13 +183,13 @@ eg. 鼠标滚轮事件(wheel)时，在每次滚动触发事件。原来是先触
 1. 定义：要用的属性不存在，要通过已有属性(被vue接管的属性)计算得来
 2. 原理：Object.defineProperty() 的 getter 和 setter
 3. get 函数执行时机：
-(1).初次读取时执行一次
+  (1).初次读取时执行一次
 
 (2).当依赖的数据(同样时vue接管的数据)发生改变时被再次调用
 
 4. 优势：与 methods 实现相比，内部有缓存机制(复用)，效率更高
 5. 备注：
-(1).计算属性最终会出现在 vm 上，直接读取就能使用
+  (1).计算属性最终会出现在 vm 上，直接读取就能使用
 
 (2).若计算属性需要被修改，必须用其 set 函数取响应修改，且 set 中要引起计算时所依赖的数据 发生变化
 

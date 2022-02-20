@@ -4,11 +4,11 @@
 
  收集表单数据：
 
-            <input type="text"> v-model -> value 的值
+            &lt;input type="text"&gt; v-model -> value 的值
 
-            <input type="radio"> 需要手动配置 value 值 => v-model -> value 的值
+            &lt;input type="radio"&gt; 需要手动配置 value 值 => v-model -> value 的值
 
-            <input type="checkbox">
+            &lt;input type="checkbox"&gt;
 
                 (1) 未配置 value 值，v-model -> checked 的值
 
